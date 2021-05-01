@@ -5,6 +5,7 @@
 
 .maxWidthWrapper {
   max-width: 1024px;
+  isolation: isolate;
 }
 
 .header {
@@ -26,13 +27,21 @@
 }
 
 .characterWrapper {
+  max-height: 700px;
+  min-height: 500px;
   position: fixed;
   top: 128px;
-  /* right: 0px; */
-  left: 800px;
-  min-height: 500px;
+  left: 65%; /* matches width of header */
 }
 
 .controlColumn {
   width: 50%;
+}
+
+.perspectiveDecoration {
+  position: fixed;
+  top: 60%;
+  width: 100%;
+  height: 60vmin;
+  background-color:  hsl(195deg, 20%, 86%);
 }
